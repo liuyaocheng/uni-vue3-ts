@@ -1,41 +1,39 @@
 <template>
   <view class="content">
-    <image class="logo" src="/static/logo.png" />
+    <image class="w-full rounded-full" src="/static/logo.png" />
     <view class="text-area">
-      <text class="title">{{ title }}</text>
+      <text class="title">
+        {{ title }}
+      </text>
     </view>
+    <view>
+      <text>{{ user.name }}</text>
+    </view>
+    <uni-badge size="small" :text="100" absolute="rightBottom" type="primary">
+      <button @click="handelClick">
+        右下
+      </button>
+    </uni-badge>
+    <List />
   </view>
 </template>
-
 <script setup lang="ts">
-import { ref } from 'vue'
+import { onShow } from '@dcloudio/uni-app'
+import { useUserStore } from '@/stores/user'
 const title = ref('Hello')
+const user = useUserStore()
+console.log(user)
+
+const handelClick = () => {
+  title.value = 'Hello World1'
+  user.name = '123123'
+}
+onShow(() => {
+  console.log('onShow')
+})
 </script>
-
-<style>
-.content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.logo {
-  height: 200rpx;
-  width: 200rpx;
-  margin-top: 200rpx;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 50rpx;
-}
-
-.text-area {
-  display: flex;
-  justify-content: center;
-}
-
-.title {
-  font-size: 36rpx;
-  color: #8f8f94;
+<style lang="scss">
+.clickme {
+  background-color: $uni-color-primary;
 }
 </style>
