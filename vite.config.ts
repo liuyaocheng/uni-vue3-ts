@@ -15,7 +15,7 @@ export default defineConfig({
     uni(),
     WindiCSS(),
     AutoImport({
-      imports: ['vue', 'pinia'],
+      imports: ['vue', 'pinia', '@vueuse/core'],
       dts: 'src/types/auto-import.d.ts',
     }),
     Components({

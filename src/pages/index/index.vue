@@ -15,15 +15,16 @@
       </button>
     </uni-badge>
     <List />
+    {{ x }}:{{ y }}
   </view>
 </template>
 <script setup lang="ts">
 import { onShow } from '@dcloudio/uni-app'
 import { useUserStore } from '@/stores/user'
+const { x, y } = useMouse()
 const title = ref('Hello')
 const user = useUserStore()
 console.log(user)
-
 const handelClick = () => {
   title.value = 'Hello World1'
   user.name = '123123'
@@ -33,7 +34,5 @@ onShow(() => {
 })
 </script>
 <style lang="scss">
-.clickme {
-  background-color: $uni-color-primary;
-}
+
 </style>
