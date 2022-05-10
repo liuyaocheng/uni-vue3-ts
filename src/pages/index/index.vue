@@ -15,7 +15,9 @@
       </button>
     </uni-badge>
     <List />
-    {{ x }}:{{ y }}
+    <view class="bg-green-100 text-red-500 px-[30upx]">
+      {{ x }}:{{ y }}
+    </view>
   </view>
 </template>
 <script setup lang="ts">
@@ -24,7 +26,8 @@ import { useUserStore } from '@/stores/user'
 const { x, y } = useMouse()
 const title = ref('Hello')
 const user = useUserStore()
-console.log(user)
+console.log(import.meta.env)
+
 const handelClick = () => {
   title.value = 'Hello World1'
   user.name = '123123'
