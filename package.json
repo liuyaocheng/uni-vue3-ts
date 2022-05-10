@@ -2,9 +2,10 @@
   "name": "uni-preset-vue",
   "version": "0.0.0",
   "scripts": {
+    "staging:h5": "uni --mode staging",
     "dev:app": "uni -p app",
     "dev:custom": "uni -p",
-    "dev:h5": "uni --mode=dev",
+    "dev:h5": "uni",
     "dev:h5:ssr": "uni --ssr",
     "dev:mp-alipay": "uni -p mp-alipay",
     "dev:mp-baidu": "uni -p mp-baidu",

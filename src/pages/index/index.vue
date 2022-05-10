@@ -26,7 +26,7 @@ import { useUserStore } from '@/stores/user'
 const { x, y } = useMouse()
 const title = ref('Hello')
 const user = useUserStore()
-console.log(import.meta.env)
+console.log(11, import.meta.env)
 
 const handelClick = () => {
   title.value = 'Hello World1'
