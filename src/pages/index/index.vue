@@ -1,6 +1,8 @@
 <template>
   <view class="content">
-    <image class="w-full rounded-full" src="/static/logo.png" />
+    <view>
+      {{ $t('hello') }}{{ $t('index.title') }}
+    </view>
     <view class="text-area">
       <text class="title">
         {{ title }}
@@ -11,7 +13,7 @@
     </view>
     <uni-badge size="small" :text="100" absolute="rightBottom" type="primary">
       <button @click="handelClick">
-        右下
+        {{ $t('you-xia') }}
       </button>
     </uni-badge>
     <List />
@@ -26,16 +28,32 @@ import { useUserStore } from '@/stores/user'
 const { x, y } = useMouse()
 const title = ref('Hello')
 const user = useUserStore()
-console.log(11, import.meta.env)
-
-const handelClick = () => {
-  title.value = 'Hello World1'
+const { locale, t } = useI18n()
+const parfn = () => {
+  return new Promise((resolve, reject) => {
+    try {
+      setTimeout(() => {
+        console.log(1)
+        resolve(1)
+      }, 3000)
+    }
+    catch (error) {
+      reject(error)
+    }
+  })
+}
+const handelClick = async() => {
+  locale.value = 'en'
+  title.value = t('hello')
   user.name = '123123'
+  const a = await parfn().catch((res) => {
+    console.log(22, res)
+  })
+  console.log(11, a)
 }
 onShow(() => {
   console.log('onShow')
 })
 </script>
 <style lang="scss">
-
 </style>
