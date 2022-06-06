@@ -4,12 +4,13 @@ import messages from '@intlify/vite-plugin-vue-i18n/messages'
 import { createI18n } from 'vue-i18n'
 
 import App from './App.vue'
-import 'uno.css'
 
 const i18n = createI18n({
-  locale: 'zh',
+  locale: 'zh-Hans',
   messages,
 })
+console.log(messages)
+
 const pinia = createPinia()
 export function createApp() {
   const app = createSSRApp(App)

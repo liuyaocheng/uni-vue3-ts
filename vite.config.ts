@@ -3,7 +3,6 @@ import { defineConfig } from 'vite'
 import uni from '@dcloudio/vite-plugin-uni'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
-import Unocss from 'unocss/vite'
 import vueI18n from '@intlify/vite-plugin-vue-i18n'
 
 // https://vitejs.dev/config/
@@ -16,23 +15,18 @@ export default defineConfig({
   },
   plugins: [
     uni(),
-    Unocss(),
     vueI18n({
-      // if you want to use Vue I18n Legacy API, you need to set `compositionOnly: false`
-      // compositionOnly: false,
-
-      // you need to set i18n resource including paths !
       include: resolve(__dirname, 'src/locales/**'),
+      defaultSFCLang: 'json',
     }),
     AutoImport({
-      imports: ['vue', 'pinia', '@vueuse/core', 'vue-i18n'],
-      dts: 'src/types/auto-import.d.ts',
+      imports: ['vue', 'pinia', '@vueuse/core', 'vue-i18n', 'uni-app'],
+      dts: './src/types/auto-import.d.ts',
+      dirs: [resolve(__dirname, 'src/stores')],
     }),
     Components({
-      dts: 'src/types/components-import.d.ts',
-      resolvers: [
-
-      ],
+      dts: './src/types/components-import.d.ts',
+      resolvers: [],
     }),
   ],
 })

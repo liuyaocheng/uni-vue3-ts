@@ -1,6 +1,7 @@
 {
-    "name" : "my vite-uni",
+    "name" : "%appName%",
     "appid" : "__UNI__E0B0DD1",
+    "locale" : "zh-Hans",
     "description" : "",
     "versionName" : "1.0.0",
     "versionCode" : "100",

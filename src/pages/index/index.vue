@@ -22,12 +22,13 @@
     </view>
   </view>
 </template>
+
 <script setup lang="ts">
-import { onShow } from '@dcloudio/uni-app'
-import { useUserStore } from '@/stores/user'
 const { x, y } = useMouse()
 const title = ref('Hello')
 const user = useUserStore()
+console.log(uni.getLocale())
+
 const { locale, t } = useI18n()
 const parfn = () => {
   return new Promise((resolve, reject) => {
@@ -42,7 +43,7 @@ const parfn = () => {
     }
   })
 }
-const handelClick = async() => {
+const handelClick = async () => {
   locale.value = 'en'
   title.value = t('hello')
   user.name = '123123'
@@ -55,5 +56,6 @@ onShow(() => {
   console.log('onShow')
 })
 </script>
+
 <style lang="scss">
 </style>
