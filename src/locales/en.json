@@ -1,6 +1,6 @@
 {
-  "hello": "你好",
-  "you-xia": "游侠",
-  "index.title": "首页",
+  "hello": "Hello",
+  "you-xia": "youxia",
+  "index.title": "index",
   "appName": "vue3"
 }

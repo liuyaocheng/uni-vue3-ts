@@ -6,7 +6,7 @@ import { createI18n } from 'vue-i18n'
 import App from './App.vue'
 
 const i18n = createI18n({
-  locale: 'zh-Hans',
+  locale: uni.getLocale(),
   messages,
 })
 console.log(messages)

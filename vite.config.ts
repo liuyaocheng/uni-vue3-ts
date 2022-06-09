@@ -7,6 +7,9 @@ import vueI18n from '@intlify/vite-plugin-vue-i18n'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  server: {
+    port: 9527,
+  },
   envDir: resolve(__dirname, 'env'),
   resolve: {
     alias: {
@@ -22,7 +25,7 @@ export default defineConfig({
     AutoImport({
       imports: ['vue', 'pinia', '@vueuse/core', 'vue-i18n', 'uni-app'],
       dts: './src/types/auto-import.d.ts',
-      dirs: [resolve(__dirname, 'src/stores')],
+      dirs: [resolve(__dirname, 'src/stores'), resolve(__dirname, 'src/composables')],
     }),
     Components({
       dts: './src/types/components-import.d.ts',

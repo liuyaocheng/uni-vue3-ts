@@ -44,7 +44,8 @@ const parfn = () => {
   })
 }
 const handelClick = async () => {
-  locale.value = 'en'
+  locale.value = locale.value === 'en' ? 'zh-Hans' : 'en'
+
   title.value = t('hello')
   user.name = '123123'
   const a = await parfn().catch((res) => {
@@ -55,6 +56,7 @@ const handelClick = async () => {
 onShow(() => {
   console.log('onShow')
 })
+useSetNavTitle('hello')
 </script>
 
 <style lang="scss">
