@@ -4,6 +4,9 @@ import uni from '@dcloudio/vite-plugin-uni'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import vueI18n from '@intlify/vite-plugin-vue-i18n'
+import Unocss from 'unocss/vite'
+import { UnocssToUni } from 'vite-plugin-unocss-to-uni'
+import Inspect from 'vite-plugin-inspect'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -18,6 +21,10 @@ export default defineConfig({
   },
   plugins: [
     uni(),
+    Unocss({
+      configFile: 'unocss.config.ts',
+    }),
+    UnocssToUni(),
     vueI18n({
       include: resolve(__dirname, 'src/locales/**'),
       defaultSFCLang: 'json',
@@ -31,5 +38,11 @@ export default defineConfig({
       dts: './src/types/components-import.d.ts',
       resolvers: [],
     }),
+    Inspect(),
   ],
+  build: {
+    rollupOptions: {
+      // external: ['@vueuse/core'],
+    },
+  },
 })

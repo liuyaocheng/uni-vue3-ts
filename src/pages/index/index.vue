@@ -17,8 +17,12 @@
       </button>
     </uni-badge>
     <List />
-    <view class="bg-green-100 text-red-500 px-[30upx]">
+    <view class="bg-green-100 text-red-500 px-10 py-10">
       {{ x }}:{{ y }}
+    </view>
+    <view class="text-lime-500 font-bold bg-gray-200 w-700 flex">
+      <view>啦啦</view>
+      <view>啦啦</view>
     </view>
   </view>
 </template>

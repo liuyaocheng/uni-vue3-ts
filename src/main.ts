@@ -4,6 +4,7 @@ import messages from '@intlify/vite-plugin-vue-i18n/messages'
 import { createI18n } from 'vue-i18n'
 
 import App from './App.vue'
+import 'uno.css'
 
 const i18n = createI18n({
   locale: uni.getLocale(),

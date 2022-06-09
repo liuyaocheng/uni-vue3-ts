@@ -1,5 +1,5 @@
 {
-    "name" : "%appName%",
+    "name" : "uni",
     "appid" : "__UNI__E0B0DD1",
     "locale" : "zh-Hans",
     "description" : "",
@@ -52,7 +52,7 @@
     "quickapp" : {},
     /* 小程序特有相关 */
     "mp-weixin" : {
-        "appid" : "",
+        "appid" : "wx472a04d7bf57f74a",
         "setting" : {
             "urlCheck" : false
         },
