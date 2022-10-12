@@ -57,7 +57,9 @@ jobs:
       - name: install hbuilderx
         run: |
           brew install --cask hbuilderx
-      - name: hbuilderx help
-        run: /Applications/HBuilderX.app/Contents/MacOS/cli help
       - name: hbuilderx ver
         run: /Applications/HBuilderX.app/Contents/MacOS/cli ver
+      - name: hbuilderx open
+        run: /Applications/HBuilderX.app/Contents/MacOS/cli open
+      - name: hbuilderx login
+        run: /Applications/HBuilderX.app/Contents/MacOS/cli user login --username ${{ secrets.username }}  --password ${{ secrets.password }}
