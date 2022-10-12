@@ -62,4 +62,4 @@ jobs:
       - name: hbuilderx open
         run: /Applications/HBuilderX.app/Contents/MacOS/cli open
       - name: hbuilderx login
-        run: /Applications/HBuilderX.app/Contents/MacOS/cli user login --username ${{ secrets.USERNAME }}  --password ${{ secrets.PASSWORD }}
+        run: /Applications/HBuilderX.app/Contents/MacOS/cli user login --username 1913510330@qq.com --password lyc_1996
