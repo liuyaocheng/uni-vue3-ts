@@ -27,30 +27,30 @@ jobs:
         run: echo "::set-output name=timestamp::$(TZ=Asia/Shanghai date +'%y%m%d%H%M')"
       - name: Checkout Project
         uses: actions/checkout@v2
-      - name: Cache node_modules Folder
-        uses: actions/cache@v2
-        with:
-          path: ${{ github.workspace }}/node_modules
-          key: ${{ runner.os }}-node_modules
-          restore-keys: ${{ runner.os }}-node_modules
-      - name: Get Yarn Cache Directory Path
-        id: yarn-cache-dir-path
-        run: echo "::set-output name=dir::$(yarn cache dir)"
-      - name: Cache Yarn
-        uses: actions/cache@v2
-        env:
-          cache-name: yarn-cache
-        with:
-          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/package.json') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
-      - name: Install Dependencies
-        run: |
-          yarn
-      - name: Build 
-        run: |
-          yarn build:h5
+#       - name: Cache node_modules Folder
+#         uses: actions/cache@v2
+#         with:
+#           path: ${{ github.workspace }}/node_modules
+#           key: ${{ runner.os }}-node_modules
+#           restore-keys: ${{ runner.os }}-node_modules
+#       - name: Get Yarn Cache Directory Path
+#         id: yarn-cache-dir-path
+#         run: echo "::set-output name=dir::$(yarn cache dir)"
+#       - name: Cache Yarn
+#         uses: actions/cache@v2
+#         env:
+#           cache-name: yarn-cache
+#         with:
+#           path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+#           key: ${{ runner.os }}-yarn-${{ hashFiles('**/package.json') }}
+#           restore-keys: |
+#             ${{ runner.os }}-yarn-
+#       - name: Install Dependencies
+#         run: |
+#           yarn
+#       - name: Build 
+#         run: |
+#           yarn build:h5
       - name: ls 
         run: |
           ls
@@ -63,5 +63,7 @@ jobs:
         run: /Applications/HBuilderX.app/Contents/MacOS/cli open
       - name: hbuilderx login
         run: /Applications/HBuilderX.app/Contents/MacOS/cli user login --username ${{ secrets.USERNAME }} --password ${{ secrets.PASSWORD }}
+      - name: hbuilderx info
+        run: /Applications/HBuilderX.app/Contents/MacOS/cli user login info
      
       
