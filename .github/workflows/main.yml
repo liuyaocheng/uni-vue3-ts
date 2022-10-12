@@ -54,6 +54,10 @@ jobs:
       - name: ls 
         run: |
           ls
-      - name: brew 
+      - name: install hbuilderx
         run: |
-          brew update
+          brew install --cask hbuilderx
+      - name: hbuilderx help
+        run: /Applications/HBuilderX.app/Contents/MacOS/cli help
+      - name: hbuilderx ver
+        run: /Applications/HBuilderX.app/Contents/MacOS/cli ver
