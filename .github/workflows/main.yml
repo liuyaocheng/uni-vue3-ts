@@ -61,9 +61,11 @@ jobs:
         run: /Applications/HBuilderX.app/Contents/MacOS/cli ver
       - name: hbuilderx open
         run: /Applications/HBuilderX.app/Contents/MacOS/cli open
+      - name: project open
+        run: /Applications/HBuilderX.app/Contents/MacOS/cli project open --path
       - name: hbuilderx login
         run: /Applications/HBuilderX.app/Contents/MacOS/cli user login --username ${{ secrets.USERNAME }} --password ${{ secrets.PASSWORD }}
       - name: hbuilderx info
-        run: /Applications/HBuilderX.app/Contents/MacOS/cli user login info
+        run: /Applications/HBuilderX.app/Contents/MacOS/cli user info
      
       
