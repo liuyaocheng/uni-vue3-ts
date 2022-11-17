@@ -64,7 +64,7 @@ jobs:
       - name: project open
         run: /Applications/HBuilderX.app/Contents/MacOS/cli project open --path ./
       - name: hbuilderx login
-        run: /Applications/HBuilderX.app/Contents/MacOS/cli user login --username 1913510330@qq.com --password lyc_1996
+        run: /Applications/HBuilderX.app/Contents/MacOS/cli user login --username --password
       - name: hbuilderx info
         run: /Applications/HBuilderX.app/Contents/MacOS/cli user info
      
