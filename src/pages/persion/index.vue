@@ -1,11 +1,6 @@
 <template>
   <view class="bg-red-200">
-    <view class="h-200">
-      {{ count }}
-    </view>
-    <view class="p-20 bg-green-200" @click="add">
-      +
-    </view>
+    persion
   </view>
 </template>
 

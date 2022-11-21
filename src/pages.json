@@ -1,12 +1,49 @@
 {
   "pages": [
     {
-      "path": "pages/index/index",
+      "path": "pages/home/index",
+      "style": {
+        "navigationBarTitleText": "首页",
+          "app-plus":{
+            "bounce":"vertical",
+            "titleNView": {
+              "blurEffect":"extralight",
+              "backgroundColor": "rgba(255, 255, 255, 0.3)",
+              "type" : "float"
+            }
+          }
+      }
+    },
+    {
+      "path": "pages/persion/index",
       "style": {
         "navigationBarTitleText": "首页"
       }
     }
   ],
+  "tabBar": {
+    "blurEffect": "extralight",
+    "color": "#999999",
+    // "borderStyle": "#000000",
+    "backgroundColor": "rgba(0,255,51,0.3)",
+    "spacing": "5px",
+    "height": "50px",
+    "selectedColor": "#0062cc",
+    "list": [
+      {
+        "text": "首页",
+        // "iconPath": "static/ic_tabbar_home_nor.png",
+        // "selectedIconPath": "static/ic_tabbar_home_sel.png",
+        "pagePath": "pages/home/index"
+      },
+      {
+        "text": "个人中心",
+        // "iconPath": "static/ic_tabbar_group_nor.png",
+        // "selectedIconPath": "static/ic_tabbar_group_sel.png",
+        "pagePath": "pages/persion/index"
+      }
+    ]
+  },
   "globalStyle": {
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "uni-app",

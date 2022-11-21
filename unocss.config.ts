@@ -35,6 +35,7 @@ export default defineConfig({
     ['pb-safe', { 'padding-bottom': 'env(safe-area-inset-bottom)' }],
     [/^m-(\d+)$/, ([, d]) => ({ margin: `${d}rpx` })],
     [/^w-(\d+)$/, ([, d]) => ({ width: `${d}rpx` })],
+    [/^h-(\d+)$/, ([, d]) => ({ height: `${d}rpx` })],
     [/^p-(\d+)$/, ([, d]) => ({ padding: `${d}rpx` })],
     [/^px-(\d+)$/, ([, d]) => ({ 'padding-left': `${d}rpx`, 'padding-right': `${d}rpx` })],
     [/^py-(\d+)$/, ([, d]) => ({ 'padding-top': `${d}rpx`, 'padding-bottom': `${d}rpx` })],

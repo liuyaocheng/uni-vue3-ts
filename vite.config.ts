@@ -3,7 +3,6 @@ import { defineConfig } from 'vite'
 import uni from '@dcloudio/vite-plugin-uni'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
-import vueI18n from '@intlify/vite-plugin-vue-i18n'
 import Unocss from 'unocss/vite'
 import Inspect from 'vite-plugin-inspect'
 
@@ -22,10 +21,6 @@ export default defineConfig({
     uni(),
     Unocss({
       configFile: 'unocss.config.ts',
-    }),
-    vueI18n({
-      include: resolve(__dirname, 'src/locales/**'),
-      defaultSFCLang: 'json',
     }),
     AutoImport({
       imports: ['vue', 'pinia', '@vueuse/core', 'vue-i18n', 'uni-app'],
