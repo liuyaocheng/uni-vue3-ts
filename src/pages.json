@@ -7,8 +7,8 @@
           "app-plus":{
             "bounce":"vertical",
             "titleNView": {
-              "blurEffect":"extralight",
-              "backgroundColor": "rgba(255, 255, 255, 0.3)",
+              "blurEffect":"light",
+              "backgroundColor": "rgba(221, 214, 254, 0.2)",
               "type" : "float"
             }
           }
@@ -25,10 +25,10 @@
     "blurEffect": "extralight",
     "color": "#999999",
     // "borderStyle": "#000000",
-    "backgroundColor": "rgba(0,255,51,0.3)",
+    "backgroundColor": "rgba(221, 214, 254, 0.2)",
     "spacing": "5px",
     "height": "50px",
-    "selectedColor": "#0062cc",
+    "selectedColor": "#8B5CF6",
     "list": [
       {
         "text": "首页",

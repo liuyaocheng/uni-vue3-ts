@@ -1,8 +1,11 @@
 <template>
   <view class="bg-red-200">
-    <view class="h-[200vh]">
+    <view class="edgeInsetTop"></view>
+    <view class="bg-green-500">asdsd</view>
+    <view class="h-[140vh]">
       {{ count }}
     </view>
+    <view>asdsad</view>
     <view class="p-20 bg-green-200" @click="add">
       +
     </view>
@@ -21,6 +24,11 @@ const add = () => {
 .edgeInsetBottom {
   width: 750rpx;
   height: var(--window-bottom);
+}
+
+.edgeInsetTop {
+  width: 750rpx;
+  height: var(--window-top);
 }
 
 .fixedView {
