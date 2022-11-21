@@ -5,6 +5,3 @@
 <script lang='ts' setup>
 const user = useUserStore()
 </script>
-
-<style scoped>
-</style>
