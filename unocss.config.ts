@@ -18,7 +18,6 @@ const isH5 = process.env.UNI_PLATFORM === 'h5'
 export default defineConfig({
   shortcuts: [],
   presets: [
-    presetUno(),
     presetApplet({ enable: !isH5 }),
     presetAttributify(),
     presetRemToRpx({ enable: false }),
